@@ -53,15 +53,17 @@ header {
 
 .local {
     margin-top: 80px;
-    margin-left: 50px;
-    display: inline-block;
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
 }
 
 .tm {
-    float: left;
-    zoom: 70%;
+    width: 210px; /* Ajuste o tamanho conforme necessário */
+    height: 210px; /* Ajuste o tamanho conforme necessário */
     border-radius: 100%;
-    
+    margin-right: 50px;
+    margin-left: 55px;
+    margin-top: 55px; /* Espaçamento à direita da imagem */
 }
 
 .tm-text {
@@ -69,9 +71,24 @@ header {
     background: #e3a6e7;
     border-radius: 13px;
     margin-top: 3%;
-    margin-right: 15%;
-    margin-left: 25%;
+    margin-right: 70px;
     filter: drop-shadow(10px 10px 4px #984c9c);
+    flex: 1; /* O texto ocupa o espaço restante */
+}
+
+.place {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    margin-top: 20px; /* Espaçamento entre seções */
+}
+
+.lugar {
+    width: 210px; /* Ajuste o tamanho conforme necessário */
+    height: 210px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 100%;
+    margin-left: 50px;
+    margin-right: 55px;
+    margin-top: 75px; /* Espaçamento à esquerda da imagem */
 }
 
 .place-text {
@@ -79,13 +96,7 @@ header {
     background: #e3a6e7;
     border-radius: 13px;
     margin-top: 3%;
-    margin-left: 4%;
-    margin-right: 55%;
+    margin-left: 70px;
     filter: drop-shadow(10px 10px 4px #984c9c);
-}
-
-.lugar {
-    float: right;
-    zoom: 70%;
-    border-radius: 100%;
+    flex: 1; /* O texto ocupa o espaço restante */
 }
