@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Sofia", sans-serif;
+}
+
+header {
+    padding-left: 30%;
+    padding-right: 30%;
+    display: flex;
+    background-color: #c162c6;
+    padding-bottom: 3px;
+}
+
+.rainbow {
+    padding-right: 20px;
+    max-width: 20%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.rainbow:hover{
+    transform: rotate(-5deg);
+}
+
+.logo {
+    padding-left: 20xpx;
+    max-width: 15%;
+    max-height: 15%;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover{
+    transform: rotate(360deg);
+}
+
+.header-text {
+    padding-top: 25px;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 1.5s ease;
+}
+
+.header-text:hover {
+    border-radius: 16px;
+    background-color: #984c9c;
+    font-size: 34px;
+    transform: rotate(-5deg);
+}
+
+.local {
+    margin-top: 80px;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.tm {
+    float: left;
+    zoom: 70%;
+    border-radius: 100%;
+    
+}
+
+.tm-text {
+    padding: 10px;
+    background: #e3a6e7;
+    border-radius: 13px;
+    margin-top: 3%;
+    margin-right: 15%;
+    margin-left: 25%;
+    filter: drop-shadow(10px 10px 4px #984c9c);
+}
+
+.place-text {
+    padding: 10px;
+    background: #e3a6e7;
+    border-radius: 13px;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-right: 55%;
+    filter: drop-shadow(10px 10px 4px #984c9c);
+}
+
+.lugar {
+    float: right;
+    zoom: 70%;
+    border-radius: 100%;
+}
