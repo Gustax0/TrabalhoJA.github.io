@@ -1,69 +1,94 @@
-* {
-    margin: 0;
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da janela */
+    margin: 0;    /* Remove margens padrão */
+    display: flex;
+    flex-direction: column; /* Para empilhar os elementos verticalmente */
 }
 
-body {
+body > * {
+    flex-shrink: 0; /* Evita que os elementos encolham */
     font-family: "Sofia", sans-serif;
 }
 
-header {
-    padding-left: 30%;
-    padding-right: 30%;
+
+.header {
     display: flex;
+    justify-content: space-between; 
+    align-items: center; 
     background-color: #c162c6;
-    padding-bottom: 3px;
+    padding: 0px 3%; 
+    padding-bottom: 20px;
 }
 
 .rainbow {
-    padding-right: 20px;
-    max-width: 20%;
+    max-width: 8vw; /* Usa 'vw' para ser responsivo */
     height: auto;
     transition: transform 0.5s ease;
 }
 
-.rainbow:hover{
+.rainbow:hover {
     transform: rotate(-5deg);
 }
 
-.logo {
-    padding-left: 20xpx;
-    max-width: 15%;
-    max-height: 15%;
-    transition: transform 0.5s ease;
-}
-
-.logo:hover{
-    transform: rotate(360deg);
-}
-
 .header-text {
-    padding-top: 25px;
     color: white;
-    font-size: 30px;
+    background-color: #7a3e7d;
+    border-radius: 16px;
+    font-size: 1.8rem; /* Usa 'rem' para que o texto escale bem */
     text-decoration: none;
+    text-align: center; /* Centraliza o texto */
     transition: transform 1.5s ease;
+    flex-grow: 1; /* Faz o texto ocupar o espaço restante entre os elementos */
+    margin-right: 40%;
+    margin-top: 10px;
 }
 
 .header-text:hover {
     border-radius: 16px;
-    background-color: #984c9c;
-    font-size: 34px;
+    background-color: white;
+    color: #984c9c;
+    font-size: 2rem; /* Incrementa o tamanho do texto em unidades responsivas */
     transform: rotate(-5deg);
 }
 
+.logo {
+    max-width: 6vw; /* Usa 'vw' para largura responsiva */
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+.Tittle-main-page {
+    text-align: center; 
+}
+
+.Tittle-mp {
+    font-size: 5.5rem; /* Ajuste o tamanho do título conforme necessário */
+    color: #333; /* Cor do texto */
+}
+
 .local {
-    margin-top: 80px;
+    margin-top: 10px;
     display: flex;
-    align-items: center; /* Alinha verticalmente no centro */
+    align-items: center; 
 }
 
 .tm {
-    width: 210px; /* Ajuste o tamanho conforme necessário */
-    height: 210px; /* Ajuste o tamanho conforme necessário */
+    width: 210px; 
+    height: 210px; 
     border-radius: 100%;
     margin-right: 50px;
     margin-left: 55px;
-    margin-top: 55px; /* Espaçamento à direita da imagem */
+    margin-top: 55px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tm:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .tm-text {
@@ -73,22 +98,29 @@ header {
     margin-top: 3%;
     margin-right: 70px;
     filter: drop-shadow(10px 10px 4px #984c9c);
-    flex: 1; /* O texto ocupa o espaço restante */
+    flex: 1; 
 }
 
 .place {
+    margin-top: 60px;
     display: flex;
-    align-items: center; /* Alinha verticalmente no centro */
-    margin-top: 20px; /* Espaçamento entre seções */
+    align-items: center; 
+    margin-top: 20px; 
 }
 
 .lugar {
-    width: 210px; /* Ajuste o tamanho conforme necessário */
-    height: 210px; /* Ajuste o tamanho conforme necessário */
+    width: 210px; 
+    height: 210px; 
     border-radius: 100%;
     margin-left: 50px;
     margin-right: 55px;
-    margin-top: 75px; /* Espaçamento à esquerda da imagem */
+    margin-top: 75px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lugar:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .place-text {
@@ -97,6 +129,123 @@ header {
     border-radius: 13px;
     margin-top: 3%;
     margin-left: 70px;
-    filter: drop-shadow(10px 10px 4px #984c9c);
-    flex: 1; /* O texto ocupa o espaço restante */
+    filter: drop-shadow(-10px 10px 4px #984c9c); /* Inverte a direção da sombra */
+    flex: 1;
+}
+
+.interior{
+    margin-top: 60px;
+    display: flex;
+    align-items: center; 
+}
+
+.foto_interior{
+    width: 210px;
+    height: 210px; 
+    border-radius: 100%;
+    margin-right: 50px;
+    margin-left: 55px;
+    margin-top: 55px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto_interior:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.interior-text{    
+        padding: 10px;
+        background: #e3a6e7;
+        border-radius: 13px;
+        margin-top: 3%;
+        margin-right: 70px;
+        filter: drop-shadow(10px 10px 4px #984c9c);
+        flex: 1;    
+}
+
+.office{
+    margin-top: 60px;
+    display: flex;
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+.office-text{
+    padding: 10px;
+    background: #e3a6e7;
+    border-radius: 13px;
+    margin-top: 3%;
+    margin-left: 70px;
+    filter: drop-shadow(-10px 10px 4px #984c9c); /* Inverte a direção da sombra */
+    flex: 1;
+    margin-bottom: 75px;
+}
+
+.office-photo{
+    width: 210px; 
+    height: 210px; 
+    border-radius: 100%;
+    margin-left: 50px;
+    margin-right: 55px;
+    margin-top: 75px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office-photo:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+footer {
+    background-color: #c162c6; /* Cor do fundo do footer */
+}
+
+.footer {
+    display: flex; /* Usar flexbox para alinhar itens na mesma linha */
+    justify-content: space-between; /* Garante espaço entre o texto e os ícones */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    padding: 10px 50px; /* Padding de 10px em cima e embaixo, 50px à esquerda e direita */
+    margin-top: auto; /* Mantém o footer na parte inferior */
+}
+
+.footer-content {
+    display: flex; /* Permite que o texto e os ícones sejam alinhados em uma linha */
+    width: 100%; /* Garante que o conteúdo ocupe a largura total */
+}
+
+.footer-section {
+    display: flex; /* Permite que o título e os ícones sejam alinhados em uma linha */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    width: 100%; /* Garante que a seção ocupe toda a largura disponível */
+}
+
+.footer-title {
+    font-size: 1.5rem; /* Tamanho da fonte do título do footer */
+    margin-right: 20px; /* Espaçamento entre o texto e os ícones */
+    padding-left: 5px; /* Espaçamento à esquerda do texto */
+}
+
+.footer-icons {
+    display: flex; 
+    align-items: center; /* Alinha os ícones verticalmente ao centro */
+    gap: 20px; 
+    border-left: 2px solid black; /* Barra preta à esquerda dos ícones */
+    padding-left: 20px; /* Espaçamento à esquerda para os ícones */
+}
+
+.footer-icons i {
+    font-size: 28px; /* Tamanho dos ícones */
+    color: white; 
+    transition: transform 0.5s ease; 
+}
+
+.footer-icons i:hover {
+    transform: scale(1.5); 
+}
+
+.sessao-direita i { /* Alvo do ícone dentro da .sessao-direita */
+    font-size: 28px; /* Tamanho do ícone de informação */
+    color: white; /* Cor do ícone */
+    margin-left: auto; /* Empurra o ícone para a extrema direita */
 }
