@@ -214,3 +214,27 @@ footer {
         margin-top: 20px; 
     }
 }
+
+.team-title {
+    font-size: 2.5rem; /* Tamanho do texto do título */
+    margin-bottom: 20px; /* Espaço entre o título e as fotos */
+}
+
+.photos-container {
+    display: flex; /* Exibe as fotos em linha */
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte, se necessário */
+    justify-content: center; /* Centraliza as imagens */
+}
+
+.fotos-team {
+    width: 15vw; /* Largura das imagens */
+    height: 15vw; /* Altura das imagens para manter a proporção */
+    border-radius: 100%; /* Forma circular */
+    margin: 5px; /* Espaço entre as imagens */
+    max-width: 100%; /* Garante que as imagens não excedam o tamanho do container */
+}
+
+.container3 {
+    text-align: center; /* Centraliza o título e o conteúdo */
+    margin: 20px 0; /* Margem para separar do resto da página */
+}
