@@ -1,13 +1,13 @@
 html, body {
-    height: 100%; /* Garante que o body ocupe toda a altura da janela */
-    margin: 0;    /* Remove margens padrão */
+    height: 100%;
+    margin: 0;
     display: flex;
-    flex-direction: column; /* Para empilhar os elementos verticalmente */
+    flex-direction: column;
+    font-family: "Sofia", sans-serif;
 }
 
 body > * {
-    flex-shrink: 0; /* Evita que os elementos encolham */
-    font-family: "Sofia", sans-serif;
+    flex-shrink: 0;
 }
 
 .header {
@@ -15,64 +15,11 @@ body > * {
     justify-content: space-between;
     align-items: center;
     background-color: #c162c6;
-    padding: 0px 3%;
-    padding-bottom: 20px;
+    padding: 0 3% 20px; /* Combinando padding */
 }
 
-.rainbow {
-    max-width: 8vw; /* Usa 'vw' para ser responsivo */
-    height: auto;
-    transition: transform 0.5s ease;
-}
-
-.rainbow:hover {
-    transform: rotate(-5deg);
-}
-
-.sobre-nos {
-    text-decoration: none;
-    color: white;
-    background-color: #7a3e7d;
-    border-radius: 16px;
-    font-size: 1.5rem; /* Tamanho de fonte menor especificamente para 'Sobre Nós' */
-    text-align: center;
-    transition: transform 1.5s ease;
-    flex-grow: 1;  /* Continua permitindo que o texto cresça */
-    margin: 0 20px; /* Ajusta as margens para evitar que o texto empurre a imagem */
-    white-space: nowrap;
-}
-
-.sobre-nos:hover{
-    border-radius: 16px;
-    background-color: white;
-    color: #984c9c;
-    font-size: 1.7rem; /* Incrementa o tamanho do texto em unidades responsivas */
-    transform: rotate(5deg);
-}
-
-.header-text {
-    color: white;
-    background-color: #7a3e7d;
-    border-radius: 16px;
-    font-size: 1.8rem;
-    text-decoration: none;
-    text-align: center;
-    transition: transform 1.5s ease;
-    flex-grow: 1;  /* Continua permitindo que o texto cresça */
-    margin: 0 20px; /* Ajusta as margens para evitar que o texto empurre a imagem */
-    white-space: nowrap;
-}
-
-.header-text:hover {
-    border-radius: 16px;
-    background-color: white;
-    color: #984c9c;
-    font-size: 2rem; /* Incrementa o tamanho do texto em unidades responsivas */
-    transform: rotate(-5deg);
-}
-
-.logo {
-    max-width: 6vw; /* Usa 'vw' para largura responsiva */
+.logo, .rainbow {
+    max-width: 6vw; /* Largura responsiva para ambos */
     height: auto;
     transition: transform 0.5s ease;
 }
@@ -81,27 +28,55 @@ body > * {
     transform: rotate(360deg);
 }
 
+.rainbow:hover {
+    transform: rotate(-5deg);
+}
+
+#tituloo{
+    font-size: 2.5rem;
+}
+
+.sobre-nos, .header-text {
+    text-decoration: none;
+    color: white;
+    background-color: #7a3e7d;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: transform 1.5s ease;
+    flex-grow: 1;
+    margin: 0 20px; /* Ajusta as margens */
+    white-space: nowrap;
+}
+
+.sobre-nos:hover, .header-text:hover {
+    border-radius: 16px;
+    background-color: white;
+    color: #984c9c;
+    font-size: 1.7rem; /* Responsividade nas fontes */
+    transform: rotate(5deg);
+}
+
 .Tittle-main-page {
-    text-align: center; 
+    text-align: center;
 }
 
 .Tittle-mp {
-    font-size: 5.5rem;
-    color: #333; 
+    font-size: 4.5rem;
+    color: #333;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;  
-    margin-top: 20px;
-    margin-bottom: 60px;         
-    gap: 50px;               
+    margin: 10px 0 20px;
+    gap: 5px;
 }
 
 .img {
-    width: 210px;
-    height: 210px;
+    width: 310px;
+    height: 310px;
     border-radius: 100%;
     margin: 50px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -109,71 +84,63 @@ body > * {
 
 .img:hover {
     transform: scale(1.1); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 10px 20px rgba(230, 49, 109, 0.2); /* Corrigido o erro de sintaxe */
 }
 
 .text-box {
     background: #e3a6e7;
     border-radius: 13px;
-    padding: 10px;
-    flex: 1;                 
+    padding: 10px; /* Reduzido para economizar espaço */
     filter: drop-shadow(10px 10px 4px #984c9c);
-    margin-right: 50px;
+    width: 100%;
+    margin: 0 70px; /* Combinado margem esquerda e direita */
 }
 
 .text-box.inverted {
-    margin-left: 50px;
-    filter: drop-shadow(-10px 10px 4px #984c9c); /* Inverte a direção da sombra */
+    filter: drop-shadow(-10px 10px 4px #984c9c);
 }
-
-/* Remover margem duplicada da primeira seção */
-.container:first-of-type {
-    margin-top: 0;
-}
-
 
 footer {
-    background-color: #c162c6; /* Cor do fundo do footer */
+    background-color: #c162c6; 
 }
 
 .footer {
-
-    display: flex; /* Usar flexbox para alinhar itens na mesma linha */
-    justify-content: space-between; /* Garante espaço entre o texto e os ícones */
-    align-items: center; /* Alinha verticalmente os itens ao centro */
-    padding: 10px 50px; /* Padding de 10px em cima e embaixo, 50px à esquerda e direita */
-    margin-top: auto; /* Mantém o footer na parte inferior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    margin-top: auto;
 }
 
 .footer-content {
-    display: flex; /* Permite que o texto e os ícones sejam alinhados em uma linha */
-    width: 100%; /* Garante que o conteúdo ocupe a largura total */
+    display: flex;
+    width: 100%; 
 }
 
 .footer-section {
-    display: flex; /* Permite que o título e os ícones sejam alinhados em uma linha */
-    align-items: center; /* Alinha verticalmente os itens ao centro */
-    width: 100%; /* Garante que a seção ocupe toda a largura disponível */
+    display: flex;
+    align-items: center;
+    width: 100%; 
 }
 
 .footer-title {
-    font-size: 1.5rem; /* Tamanho da fonte do título do footer */
-    margin-right: 20px; /* Espaçamento entre o texto e os ícones */
-    padding-left: 5px; /* Espaçamento à esquerda do texto */
-    white-space: nowrap; /* Garante que o texto não quebre em linhas */
+    font-size: 1.5rem;
+    margin-right: 20px; 
+    padding-left: 5px;
+    white-space: nowrap;
 }
 
 .footer-icons {
     display: flex; 
-    align-items: center; /* Alinha os ícones verticalmente ao centro */
-    gap: 15px; 
-    border-left: 2px solid black; /* Barra preta à esquerda dos ícones */
-    padding-left: 15px; /* Espaçamento à esquerda para os ícones */
-    width: 100%; /* Garante que os ícones ocupem o máximo da largura possível */
+    align-items: center;
+    gap: 15px;
+    border-left: 2px solid black;
+    padding-left: 15px;
+    width: 100%;
 }
 
 .footer-icons i {
-    font-size: 28px; /* Tamanho dos ícones */
+    font-size: 28px; 
     color: white; 
     transition: transform 0.5s ease; 
 }
@@ -182,15 +149,14 @@ footer {
     transform: scale(1.5); 
 }
 
-/* Adicionando a classe para empurrar a div para o lado direito */
 .sessao_direita {
-    margin-left: auto; /* Empurra a div para a extremidade direita */
+    margin-left: auto;
 }
 
 .container2 {
     display: flex;
-    align-items: flex-start; /* Alinha as seções no topo */
-    margin: 20px 50px 60px; /* Margens superior, lateral e inferior */
+    align-items: flex-start;
+    margin: 20px 50px 60px; 
     gap: 50px;
 }
 
@@ -202,33 +168,24 @@ footer {
 }
 
 .right-section {
-    flex: 0 0 300px; /* Largura fixa para a seção da direita */
+    flex: 0 0 300px; 
 }
 
-.text-box {
-    background: #e3a6e7;
-    border-radius: 13px;
-    padding: 10px;
-    filter: drop-shadow(10px 10px 4px #984c9c);
-    width: 100%; /* Garante que a caixa ocupe a largura máxima */
-}
-
-.history-title {
-    margin-bottom: 10px; /* Espaço entre o título e o texto */
-    text-align: center; /* Centraliza o texto do título */
-    width: 100%; /* Garante que o título se ajuste à largura da caixa */
+.history-title, .mission-title {
+    margin-bottom: 10px; 
+    text-align: center; 
+    width: 100%; 
 }
 
 .mission-title {
-    text-align: center;
     margin-bottom: 20px;
-    font-size: 22px; /* Aumentado para destaque */
+    font-size: 22px; 
 }
 
 .mission-content h3 {
     color: #984c9c;
     margin-bottom: 5px;
-    font-size: 20px; /* Aumentado para destaque */
+    font-size: 20px; 
 }
 
 .mission-content p {
@@ -243,18 +200,17 @@ footer {
     text-align: center;
     filter: drop-shadow(10px 10px 4px #984c9c);
     width: 100%;
-    margin: 0 20vw; /* Centraliza a caixa com margens laterais */
+    margin: 0 20vw; 
 }
 
 /* Media query para responsividade */
 @media (max-width: 768px) {
     .container2 {
-        flex-direction: column; /* Muda para coluna em telas pequenas */
-        align-items: center; /* Centraliza as seções */
+        flex-direction: column; 
+        align-items: center; 
     }
     .right-section {
-        flex: 1; /* Permite que a seção direita ocupe mais espaço */
-        margin-top: 20px; /* Espaço entre as seções em coluna */
+        flex: 1; 
+        margin-top: 20px; 
     }
 }
-
