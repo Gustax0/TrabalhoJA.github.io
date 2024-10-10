@@ -173,18 +173,15 @@ footer {
 .container2 {
     display: flex;
     align-items: flex-start; /* Alinha as seções no topo */
-    margin-top: 20px;
-    margin-bottom: 60px;
+    margin: 20px 50px 60px; /* Margens superior, lateral e inferior */
     gap: 50px;
-    margin-left: 50px;  /* Margem à esquerda da página */
-    margin-right: 50px; /* Margem à direita da página */
 }
 
 .left-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo na horizontal */
+    align-items: center; 
 }
 
 .right-section {
@@ -195,9 +192,7 @@ footer {
     background: #e3a6e7;
     border-radius: 13px;
     padding: 10px;
-    flex: 1;
     filter: drop-shadow(10px 10px 4px #984c9c);
-    margin-right: 50px;
     width: 100%; /* Garante que a caixa ocupe a largura máxima */
 }
 
@@ -210,13 +205,13 @@ footer {
 .mission-title {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 22px; /* Aumentado para destaque */
 }
 
 .mission-content h3 {
     color: #984c9c;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 20px; /* Aumentado para destaque */
 }
 
 .mission-content p {
@@ -225,5 +220,24 @@ footer {
     line-height: 1.5;
 }
 
+.text-box-left {
+    background: #e3a6e7;
+    border-radius: 13px;
+    text-align: center;
+    filter: drop-shadow(10px 10px 4px #984c9c);
+    width: 100%;
+    margin: 0 20vw; /* Centraliza a caixa com margens laterais */
+}
 
+/* Media query para responsividade */
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column; /* Muda para coluna em telas pequenas */
+        align-items: center; /* Centraliza as seções */
+    }
+    .right-section {
+        flex: 1; /* Permite que a seção direita ocupe mais espaço */
+        margin-top: 20px; /* Espaço entre as seções em coluna */
+    }
+}
 
