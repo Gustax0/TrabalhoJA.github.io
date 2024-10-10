@@ -30,7 +30,24 @@ body > * {
 }
 
 .sobre-nos {
+    text-decoration: none;
+    color: white;
+    background-color: #7a3e7d;
+    border-radius: 16px;
     font-size: 1.5rem; /* Tamanho de fonte menor especificamente para 'Sobre Nós' */
+    text-align: center;
+    transition: transform 1.5s ease;
+    flex-grow: 1;  /* Continua permitindo que o texto cresça */
+    margin: 0 20px; /* Ajusta as margens para evitar que o texto empurre a imagem */
+    white-space: nowrap;
+}
+
+.sobre-nos:hover{
+    border-radius: 16px;
+    background-color: white;
+    color: #984c9c;
+    font-size: 1.7rem; /* Incrementa o tamanho do texto em unidades responsivas */
+    transform: rotate(5deg);
 }
 
 .header-text {
