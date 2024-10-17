@@ -221,6 +221,11 @@ body > * {
     object-fit: cover;
 }
 
+.fotos-team:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(230, 49, 109, 0.2);
+}
+
 @media (max-width: 768px) {
     .photos-container {
         grid-template-columns: repeat(2, 1fr);
