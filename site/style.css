@@ -219,6 +219,12 @@ body > * {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fotos-team:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(230, 49, 109, 0.2);
 }
 
 @media (max-width: 768px) {
